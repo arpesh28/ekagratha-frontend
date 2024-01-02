@@ -1,7 +1,5 @@
-// import { Button } from "react-daisyui";
-
-import { Button } from "@/ui/components/ui/button";
-import { Input } from "@/ui/components/ui/input";
+import Form from "@/components/onboarding/form";
+import SocialButtonGroup from "@/components/onboarding/socialButtonGroup";
 import Image from "next/image";
 
 const Register = () => {
@@ -31,28 +29,9 @@ const Register = () => {
         </div>
 
         <div className="col-span-1 flex justify-center items-center flex-col px-12 w-full">
-          <form className="w-full">
-            <div className="flex flex-col">
-              <div className="mb-8">
-                <div className="pb-2">
-                  <Input
-                    type="email"
-                    placeholder="Enter Your Email"
-                    className="mt-1"
-                  />
-                </div>
-                <div>
-                  <Input
-                    type="password"
-                    placeholder="Enter Your Password"
-                    className="mt-1"
-                  />
-                </div>
-              </div>
-              <Button className="w-full">Register</Button>
-            </div>
-          </form>
+          <Form />
           <span className="my-8">Or connect with</span>
+          <SocialButtonGroup />
         </div>
       </div>
     </main>
