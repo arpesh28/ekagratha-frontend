@@ -11,8 +11,7 @@ const Form = () => {
         Register
       </h1>
       <p className="text-md text-gray-400 mb-5 text-center">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque et
-        porro
+        Streamline Your Day, One Task at a Time, Register Now!
       </p>
       <div className="flex flex-col">
         <div className="mb-8">
