@@ -58,6 +58,7 @@ const config = {
         darkMain: "#0e0e18",
         darkPrimary: "#141425",
         darkSecondary: "#1c1c31",
+        lightMain: "#F6F6F6",
         lightPrimary: "#282836",
       },
       borderRadius: {

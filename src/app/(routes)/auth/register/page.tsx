@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Register = () => {
   return (
-    <main className="mx-auto container min-h-screen flex items-center justify-center w-screen">
+    <main className="min-h-screen mx-auto flex items-center w-full justify-around">
       <div className="grid grid-cols-3 h-full">
         <div className="col-span-2 flex flex-row justify-center items-center relative">
           <div className="w-96 h-96 bg-purple-950 blur-3xl opacity-75 absolute top-[-10rem] left-[-10rem] z-0"></div>
@@ -28,9 +28,16 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="col-span-1 flex justify-center items-center flex-col px-12 w-full">
+        <div className="col-span-1 flex justify-center items-center flex-col px-12 w-full ">
           <Form />
-          <span className="my-8">Or connect with</span>
+          <span
+            className="w-full my-8 text-center overflow-hidden before:h-[1px] after:h-[1px] after:bg-lightMain 
+           after:inline-block after:relative after:align-middle after:w-1/4 
+           before:bg-lightMain before:inline-block before:relative before:align-middle 
+           before:w-1/4 before:right-2 after:left-2 text-lightMain tracking-wide"
+          >
+            Or connect with
+          </span>
           <SocialButtonGroup />
         </div>
       </div>
