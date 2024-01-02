@@ -30,20 +30,29 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="col-span-1 flex justify-center items-center px-12 w-full">
-          <form>
+        <div className="col-span-1 flex justify-center items-center flex-col px-12 w-full">
+          <form className="w-full">
             <div className="flex flex-col">
-              <div className="pb-12">
-                <div className="pb-4">
-                  <Input type="email" placeholder="Enter Your Email" />
+              <div className="mb-8">
+                <div className="pb-2">
+                  <Input
+                    type="email"
+                    placeholder="Enter Your Email"
+                    className="mt-1"
+                  />
                 </div>
                 <div>
-                  <Input type="password" placeholder="Enter Your Password" />
+                  <Input
+                    type="password"
+                    placeholder="Enter Your Password"
+                    className="mt-1"
+                  />
                 </div>
               </div>
-              <Button className="text-textDark w-full">Click Me</Button>
+              <Button className="w-full">Register</Button>
             </div>
           </form>
+          <span className="my-8">Or connect with</span>
         </div>
       </div>
     </main>
