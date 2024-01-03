@@ -34,10 +34,10 @@ const Header = () => {
   return (
     <header className="container items-center w-[calc(100%-240px)] fixed right-0 pt-8 flex justify-between ">
       <div>
-        {/* <p className="text-sm text-gray-600">Hi, Arpesh!</p> */}
         <h3 className="text-2xl">
           {navItems.find((item) => item.href == pathname)?.heading}
         </h3>
+        <p className="text-sm text-gray-600">Hi, Arpesh!</p>
       </div>
       <div className="flex items-center justify-center">
         <Button
