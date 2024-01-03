@@ -10,10 +10,24 @@ const ListView = () => {
         </span>
       </h2>
       <ul>
-        <TaskListItem />
-        <TaskListItem />
-        <TaskListItem />
-        <TaskListItem />
+        <TaskListItem
+          key={0}
+          name="Learn Swift for IOS Development"
+          priority="high"
+          status={0}
+        />
+        <TaskListItem
+          key={1}
+          name="Develop Ekagratha App"
+          priority="medium"
+          status={0}
+        />
+        <TaskListItem
+          key={2}
+          name="Design & Develop Personal Portfolio showcasing skills and projects."
+          priority="low"
+          status={1}
+        />
       </ul>
     </div>
   );
