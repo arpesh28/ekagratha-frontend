@@ -59,6 +59,7 @@ const config = {
         darkPrimary: "#131418", //#18181a,#131319,141425
         darkSecondary: "#17181d", //#212124, #1b1b24,1c1c31
         darkOption: "#17181d",
+        darkBorder: "#292d39",
         lightMain: "#cbd3dd", //#cbd3dd,F6F6F6
         lightPrimary: "#282836",
       },

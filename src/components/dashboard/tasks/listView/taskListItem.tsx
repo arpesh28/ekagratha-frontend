@@ -5,7 +5,7 @@ import CategoryBadge from "./categoryBadge";
 
 const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
   return (
-    <li className="bg-darkSecondary  px-5 py-3 rounded-lg mb-[2px] flex items-center justify-between">
+    <li className="bg-darkSecondary px-5 py-3 rounded-lg mb-[2px] flex items-center justify-between">
       <div className="flex items-center justify-start">
         <Checkbox
           className="w-4 h-4 rounded-full"
