@@ -1,5 +1,5 @@
-import Form from "@/components/onboarding/form";
-import SocialButtonGroup from "@/components/onboarding/socialButtonGroup";
+import Form from "@/components/landing/onboarding/form";
+import SocialButtonGroup from "@/components/landing/onboarding/socialButtonGroup";
 import Image from "next/image";
 
 const Register = () => {
@@ -22,6 +22,7 @@ const Register = () => {
             alt="Register Illustration"
             height={400}
             width={400}
+            priority
             className="w-72 lg:w-96"
             src="/Images/register-illustration.svg"
           />

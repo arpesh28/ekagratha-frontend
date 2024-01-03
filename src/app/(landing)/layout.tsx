@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Raleway, Nunito } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/header/externalHeader";
+import "../globals.css";
+import Header from "@/components/landing/header/externalHeader";
 
 const poppins = Poppins({
   subsets: ["latin"],

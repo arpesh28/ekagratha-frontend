@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { FcGoogle } from "react-icons/fc";
 import { SiFacebook, SiDiscord } from "react-icons/si";
 

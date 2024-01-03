@@ -1,12 +1,17 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 //  Components
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
+import { Button } from "../../ui/button";
+import { Input } from "../../ui/input";
 
 const Form = () => {
+  const router = useRouter();
   return (
-    <form className="w-full">
+    <form
+      className="w-full"
+      onSubmit={(e) => router.replace("/dashboard/personal")}
+    >
       <h1 className="text-2xl md:text-3xl font-semibold tracking-wider text-textPrimary text-center mb-3">
         Register
       </h1>
@@ -30,7 +35,9 @@ const Form = () => {
             />
           </div>
         </div>
-        <Button className="w-full">Register</Button>
+        <Button className="w-full" type="submit">
+          Register
+        </Button>
       </div>
     </form>
   );
