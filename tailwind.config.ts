@@ -55,11 +55,11 @@ const config = {
         textLight: "#fcfcfd",
         textDark: "#0f172a",
         // primary: "#8419e6",
-        darkMain: "#0e0e18",
-        darkPrimary: "#141425",
-        darkSecondary: "#1c1c31",
+        darkMain: "#0e0f12", //#0e0f12,0e0e18
+        darkPrimary: "#131418", //#18181a,#131319,141425
+        darkSecondary: "#17181d", //#212124, #1b1b24,1c1c31
         darkOption: "#11111F",
-        lightMain: "#F6F6F6",
+        lightMain: "#cbd3dd", //#cbd3dd,F6F6F6
         lightPrimary: "#282836",
       },
       borderRadius: {

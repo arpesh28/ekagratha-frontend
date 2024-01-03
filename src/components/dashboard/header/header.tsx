@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 //  Icon
-import { TbLogout } from "react-icons/tb";
+import { IoIosArrowDown } from "react-icons/io";
 
 //  Components
 import { navItems } from "../sideNav/config";
@@ -32,7 +32,7 @@ import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="container items-center w-[calc(100%-240px)] fixed right-0 pt-8 flex justify-between ">
+    <header className="pl-80 pr-12 w-full fixed top-0 left-0 pt-8 flex items-center justify-between">
       <div>
         <h3 className="text-2xl">
           {navItems.find((item) => item.href == pathname)?.heading}
@@ -78,6 +78,7 @@ const Header = () => {
                   arpesh@gmail.com
                 </span>
               </div>
+              <IoIosArrowDown className="ml-2 text-xl" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56 rounded-md border-[1px] border-gray-700 bg-darkOption hover:bg-darkOption">

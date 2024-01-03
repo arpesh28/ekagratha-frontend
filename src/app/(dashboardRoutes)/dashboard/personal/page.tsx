@@ -1,7 +1,11 @@
+import ListView from "@/components/dashboard/tasks/listView/taskListView";
+
 const Register = () => {
   return (
-    <main className="min-h-screen container mx-auto items-center w-screen grid grids-cols-1 lg:grid-cols-5 lg:mt-[-104px] py-12 md:py-0">
-      Page.tsx
+    <main className="min-h-screen pr-12 w-full pt-12 pl-80 md:pt-24">
+      <ListView />
+      <ListView />
+      <ListView />
     </main>
   );
 };

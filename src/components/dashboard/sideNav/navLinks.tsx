@@ -17,7 +17,10 @@ const NavLinks = () => {
             key={link.name + index}
             className={clsx(
               "my-1 text-sm text-lightMain tracking-wide w-full justify-start py-3 hover:bg-darkSecondary hover:text-lightMain flex items-center px-5 rounded-sm transition-all duration-300",
-              { "bg-darkSecondary": pathname === link.href }
+              {
+                "bg-darkSecondary text-primary font-semibold":
+                  pathname === link.href,
+              }
             )}
           >
             <LinkIcon />
