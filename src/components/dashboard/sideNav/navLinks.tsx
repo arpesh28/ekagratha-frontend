@@ -12,17 +12,16 @@ const NavLinks = () => {
       {navItems?.map((link, index) => {
         const LinkIcon = link.icon;
         return (
-          <Link href="#" className="my-1" key={link.name + index}>
-            <Button
-              variant="ghost"
-              className={clsx(
-                "text-sm text-lightMain tracking-wide w-full justify-start py-5 hover:bg-darkSecondary hover:text-lightMain",
-                { "bg-darkSecondary": pathname === link.href }
-              )}
-            >
-              <LinkIcon />
-              <span className="ml-4">{link.name}</span>
-            </Button>
+          <Link
+            href={link.href}
+            key={link.name + index}
+            className={clsx(
+              "my-1 text-sm text-lightMain tracking-wide w-full justify-start py-3 hover:bg-darkSecondary hover:text-lightMain flex items-center px-5 rounded-sm transition-all duration-300",
+              { "bg-darkSecondary": pathname === link.href }
+            )}
+          >
+            <LinkIcon />
+            <span className="ml-4">{link.name}</span>
           </Link>
         );
       })}
