@@ -60,6 +60,10 @@ const config = {
           DEFAULT: "hsl(var(--card-selection))",
           foreground: "hsl(var(--card-selection-foreground))",
         },
+        sideNav: {
+          DEFAULT: "hsl(var(--sideNav))",
+          foreground: "hsl(var(--card-selection-foreground))",
+        },
         specialBackground: {
           DEFAULT: "hsl(var(--special-background))",
           foreground: "hsl(var(--card-selection-foreground))",

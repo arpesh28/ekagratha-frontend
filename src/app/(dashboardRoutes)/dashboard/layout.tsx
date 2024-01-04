@@ -18,18 +18,13 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        disableTransitionOnChange
-        enableSystem
-        defaultTheme="dark"
-      >
-        <body className={`${poppins.className} antialiased  bg-background`}>
+      <body className={`${poppins.className} antialiased  bg-background`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
           <SideNav />
           <div className="md:overflow-y-auto">{children}</div>
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
