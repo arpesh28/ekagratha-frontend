@@ -3,46 +3,29 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-//  Icon
-import { IoIosArrowDown } from "react-icons/io";
-
 //  Components
 import { navItems } from "../sideNav/config";
 
-//  Shadcn/ui
+import Menu from "./menu";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { FiLogOut, FiUser } from "react-icons/fi";
-import { Avatar } from "@/components/ui/avatar";
-import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import ThemeToggler from "./themeToggler";
 
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="pl-80 pr-12 w-full fixed top-0 left-0 pt-8 flex items-center justify-between">
+    <header className="pl-80 pr-12 w-full absolute top-0 left-0 pt-8 flex items-center justify-between">
       <div>
-        <h3 className="text-2xl">
+        <h3 className="text-2xl font-semibold">
           {navItems.find((item) => item.href == pathname)?.heading}
         </h3>
         <p className="text-sm text-gray-600">Hi, Arpesh!</p>
       </div>
+      <ThemeToggler />
       <div className="flex items-center justify-center">
         <Button
           size="icon"
-          className="bg-transparent hover:bg-transparent  transition-all ease-in-out duration-500 group p-0"
+          variant="ghost"
+          className=" shadow-none hover:bg-transparent  transition-all ease-in-out duration-500 group p-0"
         >
           <svg
             width="18"
@@ -57,39 +40,7 @@ const Header = () => {
             />
           </svg>
         </Button>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              className="hover:bg-transparent group !border-0 focus-visible:ring-0"
-              variant="ghost"
-            >
-              <Avatar className="h-10 w-10 group-hover:border-2 duration-100 transition-all ease-in-out">
-                <AvatarImage
-                  src="https://github.com/shadcn.png"
-                  alt="@shadcn"
-                />
-                <AvatarFallback className="h-full w-full bg-primary flex items-center justify-center">
-                  AG
-                </AvatarFallback>
-              </Avatar>
-              <div className="flex flex-col items-start ml-5 tracking-wide font-semibold">
-                <span>Arpesh Gadekar</span>
-                <span className="text-gray-500 tracking-wide font-light">
-                  arpesh@gmail.com
-                </span>
-              </div>
-              <IoIosArrowDown className="ml-2 text-xl" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56 rounded-md border-[1px] border-gray-700 bg-darkOption hover:bg-darkOption">
-            <DropdownMenuLabel className="">My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator className="bg-gray-700" />
-            <DropdownMenuItem className="hover:cursor-pointer">
-              <FiLogOut className="mr-2 h-4 w-4" />
-              <span>Log out</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Menu />
       </div>
     </header>
   );

@@ -52,16 +52,38 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        textLight: "#fcfcfd",
-        textDark: "#0f172a",
-        // primary: "#8419e6",
-        darkMain: "#0e0f12", //#0e0f12,0e0e18
-        darkPrimary: "#131418", //#18181a,#131319,141425
-        darkSecondary: "#17181d", //#212124, #1b1b24,1c1c31
-        darkOption: "#17181d",
-        darkBorder: "#292d39",
-        lightMain: "#cbd3dd", //#cbd3dd,F6F6F6
-        lightPrimary: "#282836",
+        cardContainer: {
+          DEFAULT: "hsl(var(--card-container))",
+          foreground: "hsl(var(--card-container-foreground))",
+        },
+        cardSelection: {
+          DEFAULT: "hsl(var(--card-selection))",
+          foreground: "hsl(var(--card-selection-foreground))",
+        },
+        specialBackground: {
+          DEFAULT: "hsl(var(--special-background))",
+          foreground: "hsl(var(--card-selection-foreground))",
+        },
+        redText: {
+          DEFAULT: "hsl(var(--red-text))",
+        },
+        yellowText: {
+          DEFAULT: "hsl(var(--yellow-text))",
+        },
+        greenText: {
+          DEFAULT: "hsl(var(--green-text))",
+        },
+
+        // textLight: "#fcfcfd",
+        // textDark: "#0f172a",
+        // // primary: "#8419e6",
+        // darkMain: "#0e0f12", //#0e0f12,0e0e18
+        // darkPrimary: "#131418", //#18181a,#131319,141425
+        // darkSecondary: "#17181d", //#212124, #1b1b24,1c1c31
+        // darkOption: "#17181d",
+        // darkBorder: "#292d39",
+        // lightMain: "#cbd3dd", //#cbd3dd,F6F6F6
+        // lightPrimary: "#282836",
       },
       borderRadius: {
         lg: "var(--radius)",

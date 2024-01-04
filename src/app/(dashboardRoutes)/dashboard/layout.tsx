@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import SideNav from "@/components/dashboard/sideNav/sideNav";
 import "../../globals.css";
 import Header from "@/components/dashboard/header/header";
+import { ThemeProvider } from "@/app/themeProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,10 +18,12 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>
-        <Header />
-        <SideNav />
-        <div className="md:overflow-y-auto">{children}</div>
+      <body className={`${poppins.className} antialiased  bg-background`}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <Header />
+          <SideNav />
+          <div className="md:overflow-y-auto">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );

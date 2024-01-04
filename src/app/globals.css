@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   :root {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -47,9 +47,70 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
   }
+} */
+
+@layer base {
+  :root {
+    --background: 210 31% 95%;
+    --foreground: 251 16% 21%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --card-container: 214 47% 97%;
+    --card-container-foreground: 222.2 84% 4.9%;
+    --card-selection: 220 82% 96%;
+    --card-selection-foreground: 222.2 84% 4.9%;
+    --primary: 271 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 217 45% 94%;
+    --muted-foreground: 213 23% 64%;
+    --border: 220 17% 93%;
+    --input: 0 0% 100%;
+    --accent: 169 51% 50%;
+    --ring: 271 80% 50%;
+    --red-text: 0 46% 46%;
+    --yellow-text: 40 81% 44%;
+    --green-text: 146 64% 36%;
+    --special-background: 0 0% 100%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 225 13% 6%;
+    --foreground: 210 40% 98%;
+    --card: 240 11% 9%;
+    --card-foreground: 210 40% 98%;
+    --card-container: 228 14% 7%;
+    --card-container-foreground: 210 40% 98%;
+    --card-selection: 229 22% 15%;
+    --card-selection-foreground: 222.2 84% 4.9%;
+    --border: 233 15% 12%;
+    --primary: 271 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 169 51% 50%;
+    --muted: 240 17% 16%;
+    --muted-foreground: 231 13% 43%;
+    --input: 255, 29%, 16%;
+    --special-background: 270 30% 91%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 14, 15, 18;
@@ -65,4 +126,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
+
+/* ===> Theme Toggler Component */
+
+/* .handle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 40px;
+} */
+/* Theme Toggler Component <=== */

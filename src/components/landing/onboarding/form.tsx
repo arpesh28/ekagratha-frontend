@@ -24,18 +24,18 @@ const Form = () => {
             <Input
               type="email"
               placeholder="Enter Your Email"
-              className="mt-1"
+              className="mt-1 bg-input shadow-sm border-0"
             />
           </div>
           <div>
             <Input
               type="password"
               placeholder="Enter Your Password"
-              className="mt-1"
+              className="mt-1 bg-input shadow-sm border-0"
             />
           </div>
         </div>
-        <Button className="w-full" type="submit">
+        <Button className="w-full bg-primary" type="submit">
           Register
         </Button>
       </div>
