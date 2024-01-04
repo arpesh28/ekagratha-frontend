@@ -20,7 +20,6 @@ const Header = () => {
         </h3>
         <p className="text-sm text-gray-600">Hi, Arpesh!</p>
       </div>
-      <ThemeToggler />
       <div className="flex items-center justify-center">
         <Button
           size="icon"
@@ -40,6 +39,7 @@ const Header = () => {
             />
           </svg>
         </Button>
+        <ThemeToggler />
         <Menu />
       </div>
     </header>
