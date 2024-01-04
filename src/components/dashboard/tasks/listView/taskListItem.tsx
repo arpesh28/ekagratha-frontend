@@ -7,7 +7,9 @@ import { heebo } from "@/lib/fonts";
 const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
   return (
     <li
-      className={`bg-card px-5 py-3 rounded-lg mb-1 flex items-center justify-between shadow-sm ${heebo.className}`}
+      className={clsx(
+        `bg-card px-5 py-3 rounded-lg mb-1 flex items-center justify-between shadow-sm ${heebo.className}`
+      )}
     >
       <div className="flex items-center justify-start">
         <Checkbox
@@ -21,7 +23,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
           className={clsx(
             "text-sm ml-4 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
             {
-              "line-through": status == 1,
+              "line-through opacity-50 text-greenText": status == 1,
             }
           )}
         >
