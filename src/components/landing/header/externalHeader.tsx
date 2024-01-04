@@ -17,10 +17,10 @@ const Header = () => {
         </Link>
       </nav>
       <nav className="justify-between w-auto md:inline-block hidden">
-        <Link href="#!" className="mr-20">
+        <Link href="/auth/login" className="mr-20">
           Login
         </Link>
-        <Link href="#!" className="mr-20">
+        <Link href="/auth/register" className="mr-20">
           Register
         </Link>
       </nav>

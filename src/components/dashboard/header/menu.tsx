@@ -14,6 +14,7 @@ import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 //  Icon
 import { IoIosArrowDown } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
+import Link from "next/link";
 
 const Menu = () => {
   return (
@@ -43,7 +44,7 @@ const Menu = () => {
         <DropdownMenuSeparator className="bg-gray-700" />
         <DropdownMenuItem className="hover:cursor-pointer">
           <FiLogOut className="mr-2 h-4 w-4" />
-          <span>Log out</span>
+          <Link href="/auth/login">Log out</Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
