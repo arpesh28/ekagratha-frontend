@@ -30,7 +30,7 @@ const Menu = () => {
               AG
             </AvatarFallback>
           </Avatar>
-          <div className="flex flex-col items-start ml-5 tracking-wide font-semibold">
+          <div className="hidden md:flex flex-col items-start ml-5 tracking-wide font-semibold">
             <span>Arpesh Gadekar</span>
             <span className="text-gray-500 tracking-wide font-light">
               arpesh@gmail.com

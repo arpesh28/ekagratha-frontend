@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 //  Components
-import { navItems } from "../sideNav/config";
+import { navItems } from "../nav/config";
 
 import Menu from "./menu";
 import { Button } from "@/components/ui/button";
@@ -13,9 +13,9 @@ import ThemeToggler from "./themeToggler";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="pl-80 pr-12 w-full absolute top-0 left-0 pt-8 flex items-center justify-between">
+    <header className="px-10 lg:pl-80 lg:pr-12 w-full lg:absolute top-0 left-0 pt-8 flex items-center justify-between">
       <div>
-        <h3 className="text-2xl font-semibold">
+        <h3 className="text-lg lg:text-2xl font-semibold">
           {navItems.find((item) => item.href == pathname)?.heading}
         </h3>
         <p className="text-sm text-gray-600">Hi, Arpesh!</p>
@@ -24,7 +24,7 @@ const Header = () => {
         <Button
           size="icon"
           variant="ghost"
-          className=" shadow-none hover:bg-transparent  transition-all ease-in-out duration-500 group p-0"
+          className="hidden md:block shadow-none hover:bg-transparent  transition-all ease-in-out duration-500 group p-0"
         >
           <svg
             width="18"

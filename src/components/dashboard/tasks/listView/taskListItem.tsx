@@ -8,10 +8,15 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
   return (
     <li
       className={clsx(
-        `bg-card px-5 py-3 rounded-lg mb-1 flex items-center justify-between shadow-sm ${heebo.className}`
+        `bg-card px-3 lg:px-5 py-3 relative rounded-lg mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className}`,
+        {
+          "after:bg-redText after:shadow-redText": priority === "high",
+          "after:bg-yellowText after:shadow-yellowText": priority === "medium",
+          "after:bg-greenText after:shadow-greenText": priority === "low",
+        }
       )}
     >
-      <div className="flex items-center justify-start">
+      <div className="flex items-start justify-start">
         <Checkbox
           className={`w-4 h-4 rounded-full`}
           id="terms"
@@ -21,7 +26,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
         <label
           htmlFor="terms"
           className={clsx(
-            "text-sm ml-4 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+            "text-sm ml-4 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-ellipsis overflow-hidden line-clamp-2 mr-5",
             {
               "line-through opacity-50 text-greenText": status == 1,
             }
@@ -30,23 +35,29 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
           {name}
         </label>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-start mt-2 ml-8 md:m-0">
         <span
-          className={clsx(`font-medium text-md mr-4 uppercase `, {
-            "text-redText": priority == "high",
-            "text-yellowText": priority == "medium",
-            "text-greenText": priority == "low",
-          })}
+          className={clsx(
+            `font-medium hidden md:block text-md mr-4 uppercase `,
+            {
+              "text-redText": priority == "high",
+              "text-yellowText": priority == "medium",
+              "text-greenText": priority == "low",
+            }
+          )}
         >
           {priority}
         </span>
-        <div className="mr-4">
+        <div className="mr-4 hidden lg:block">
           <CategoryBadge name="NPM Package" />
           <CategoryBadge name="Node.js" />
           <CategoryBadge name="MongoDB" />
         </div>
-        <div className={`text-sm font-medium text-gray-400 `}>
-          10-01-24 <span className="font-light ml-2 text-gray-500">2:30pm</span>
+        <div
+          className={`text-sm font-medium text-gray-500 md:text-gray-400 text-right  md:flex lg:block flex-col items-end justify-start `}
+        >
+          <span>10-01-24</span>
+          <span className="font-light ml-2 text-gray-500">2:30pm</span>
         </div>
       </div>
     </li>
