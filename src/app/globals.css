@@ -25,6 +25,7 @@
     --green-text: 146 64% 36%;
     --special-background: 0 0% 100%;
     --sideNav: 0 0% 100%;
+    --sideNav-foreground: 251 16% 21%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
@@ -54,6 +55,7 @@
     --input: 255, 29%, 16%;
     --special-background: 270 30% 91%;
     --sideNav: 228 14% 7%;
+    --sideNav-foreground: 0 0% 100%;
 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;

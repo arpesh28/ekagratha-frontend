@@ -16,9 +16,9 @@ const NavLinks = () => {
             href={link.href}
             key={link.name + index}
             className={clsx(
-              "my-1 text-sm  tracking-wide w-full justify-start py-3 hover:bg-cardSelection  flex items-center px-5 rounded-sm transition-all duration-300",
+              "my-1 text-sm text-sideNav-foreground tracking-wide w-full justify-start py-3 hover:bg-cardSelection  flex items-center px-5 rounded-sm transition-all duration-300",
               {
-                "bg-cardSelection text-primary font-semibold":
+                "bg-cardSelection !text-primary font-semibold":
                   pathname === link.href,
               }
             )}

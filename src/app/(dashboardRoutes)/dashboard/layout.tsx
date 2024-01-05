@@ -4,6 +4,7 @@ import SideNav from "@/components/dashboard/nav/sideNav";
 import "../../globals.css";
 import Header from "@/components/dashboard/header/header";
 import { ThemeProvider } from "@/app/themeProvider";
+import BottomNav from "@/components/dashboard/nav/bottomNav";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
           <SideNav />
+          <BottomNav />
           <div className="md:overflow-y-auto">{children}</div>
         </ThemeProvider>
       </body>

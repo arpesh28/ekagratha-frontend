@@ -62,7 +62,7 @@ const config = {
         },
         sideNav: {
           DEFAULT: "hsl(var(--sideNav))",
-          foreground: "hsl(var(--card-selection-foreground))",
+          foreground: "hsl(var(--sideNav-foreground))",
         },
         specialBackground: {
           DEFAULT: "hsl(var(--special-background))",
