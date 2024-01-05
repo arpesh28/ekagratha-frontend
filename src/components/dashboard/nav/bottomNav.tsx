@@ -7,7 +7,7 @@ import Link from "next/link";
 const BottomNav = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full bg-sideNav border-t-2 border-border overflow-hidden shadow-2xl">
+    <div className="fixed lg:hidden bottom-0 left-0 z-50 w-full bg-sideNav border-t-2 border-border overflow-hidden shadow-2xl">
       <ul className="grid grid-flow-col gap-4 overflow-auto px-4 py-2 items-center h-full">
         {navItems?.map((link, index) => {
           const LinkIcon = link.icon;
