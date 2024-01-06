@@ -8,7 +8,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
   return (
     <li
       className={clsx(
-        `bg-card px-3 lg:px-5 py-3 relative rounded-lg mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className}`,
+        `bg-card px-3 lg:px-5 py-3 relative rounded-lg mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className} cursor-pointer hover:bg-card/30 transition-all duration-400`,
         {
           "after:bg-redText after:shadow-redText": priority === "high",
           "after:bg-yellowText after:shadow-yellowText": priority === "medium",
