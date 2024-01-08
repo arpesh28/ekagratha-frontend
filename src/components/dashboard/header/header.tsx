@@ -8,7 +8,7 @@ import { navItems } from "../nav/config";
 
 import Menu from "./menu";
 import { Button } from "@/components/ui/button";
-import ThemeToggler from "./themeToggler";
+import ThemeToggler from "../../themeToggler";
 
 const Header = () => {
   const pathname = usePathname();
@@ -39,7 +39,7 @@ const Header = () => {
             />
           </svg>
         </Button>
-        <ThemeToggler />
+        {/* <ThemeToggler /> */}
         <Menu />
       </div>
     </header>
