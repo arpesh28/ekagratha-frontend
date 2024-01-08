@@ -13,7 +13,7 @@ import ThemeToggler from "../../themeToggler";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="px-5 lg:pl-80 lg:pr-12 w-full lg:absolute top-0 left-0 pt-8 flex items-center justify-between">
+    <header className="w-full bg-sideNav pl-10 py-4 flex items-center justify-between border-b-2 border-border">
       <div>
         <h3 className="text-lg lg:text-2xl font-semibold">
           {navItems.find((item) => item.href == pathname)?.heading}
