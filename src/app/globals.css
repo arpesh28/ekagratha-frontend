@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 210 31% 95%;
+    --background: 0 0% 99%;
     --foreground: 251 16% 21%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -12,11 +12,11 @@
     --card-container-foreground: 222.2 84% 4.9%;
     --card-selection: 220 82% 96%;
     --card-selection-foreground: 222.2 84% 4.9%;
-    --primary: 271 80% 50%;
+    --primary: 220 83% 47%;
     --primary-foreground: 0 0% 100%;
     --muted: 217 45% 94%;
     --muted-foreground: 213 23% 64%;
-    --border: 220 17% 93%;
+    --border: 222 24% 89%;
     --input: 0 0% 100%;
     --accent: 169 51% 50%;
     --ring: 271 80% 50%;
@@ -37,6 +37,10 @@
     --radius: 10px;
 
     --card-container-shadow: 2px 6px 20px 2px #bdc3ca61;
+
+    --card-container-gradient: linear-gradient(45deg, #f7f7f7, #f9f9f9);
+    --card-gradient: linear-gradient(45deg, white, white);
+    --sideNav-gradient: linear-gradient(45deg, #fcfcfc, #fcfcfc);
   }
 
   .dark {
@@ -50,7 +54,7 @@
     --card-selection: 240 15% 11%;
     --card-selection-foreground: 222.2 84% 4.9%;
     --border: 220 10% 17%;
-    --primary: 271 80% 50%;
+    --primary: 220 83% 47%;
     --primary-foreground: 0 0% 100%;
     --accent: 169 51% 50%;
     --muted: 240 18% 23%;
