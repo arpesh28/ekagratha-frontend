@@ -1,6 +1,14 @@
-const MainContainer = ({ children }: { children: React.ReactNode }) => {
+const MainContainer = ({
+  children,
+  classes,
+}: {
+  children: React.ReactNode;
+  classes: string;
+}) => {
   return (
-    <main className=" w-full overflow-y-scroll container pb-[100px] lg:pb-0">
+    <main
+      className={` overflow-y-scroll overflow-x-visible pt-4 px-4 pb-[100px] lg:pb-0 ${classes}`}
+    >
       {children}
     </main>
   );

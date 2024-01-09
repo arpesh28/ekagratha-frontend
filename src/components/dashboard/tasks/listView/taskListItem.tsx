@@ -8,7 +8,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
   return (
     <li
       className={clsx(
-        `bg-card px-3 lg:px-5 py-3 relative rounded-lg mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className} cursor-pointer hover:bg-card/30 transition-all duration-400`,
+        `bg-cardGradient px-3 lg:px-5 py-3 relative rounded-lg mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className} cursor-pointer hover:bg-card/30 transition-all duration-400`,
         {
           "after:bg-redText after:shadow-redText": priority === "high",
           "after:bg-yellowText after:shadow-yellowText": priority === "medium",
@@ -22,7 +22,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
           id="terms"
           checked={status == 1}
         />
-
+        {/* radial-gradient(    circle at center,    #0f1118, #121219,    #0f1118, rgb(13 12 21)   ) */}
         <label
           htmlFor="terms"
           className={clsx(
@@ -48,11 +48,11 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
         >
           {priority}
         </span>
-        <div className="mr-4 hidden lg:block">
+        {/* <div className="mr-4 hidden lg:block">
           <CategoryBadge name="NPM Package" />
           <CategoryBadge name="Node.js" />
           <CategoryBadge name="MongoDB" />
-        </div>
+        </div> */}
         <div
           className={`text-sm font-medium text-gray-500 md:text-gray-400 text-right  md:flex lg:block flex-col items-end justify-start `}
         >

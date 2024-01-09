@@ -34,19 +34,22 @@
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --radius: 0.5rem;
+    --radius: 10px;
+
+    --card-container-shadow: 2px 6px 20px 2px #bdc3ca61;
   }
 
   .dark {
-    --background: 225 13% 6%;
+    --background: 225 17% 9%;
     --foreground: 210 40% 98%;
     --card: 240 15% 14%;
     --card-foreground: 210 40% 98%;
     --card-container: 228 14% 7%;
+
     --card-container-foreground: 210 40% 98%;
     --card-selection: 240 15% 11%;
     --card-selection-foreground: 222.2 84% 4.9%;
-    --border: 233 15% 12%;
+    --border: 220 10% 17%;
     --primary: 271 80% 50%;
     --primary-foreground: 0 0% 100%;
     --accent: 169 51% 50%;
@@ -54,7 +57,8 @@
     --muted-foreground: 240 34% 72%;
     --input: 255, 29%, 16%;
     --special-background: 270 30% 91%;
-    --sideNav: 228 14% 7%;
+    --sideNav: 232 13% 12%;
+
     --sideNav-foreground: 0 0% 100%;
 
     --popover: 222.2 84% 4.9%;
@@ -64,5 +68,25 @@
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+    --radius: 10px;
+
+    --card-container-shadow: 0px 25px 44px -28px #00000082;
+
+    --card-container-gradient: radial-gradient(
+      14155.25% 129.31% at 51.09% 40.14%,
+      rgba(35, 35, 41, 0.06) 0%,
+      rgba(26, 27, 33, 0.87) 100%
+    );
+    --card-gradient: linear-gradient(
+      270deg,
+      rgba(33, 34, 41, 0.71) 7.5%,
+      rgba(34, 35, 41, 0.55) 85.65%
+    );
+    --sideNav-gradient: linear-gradient(
+      270deg,
+      rgba(26, 27, 34, 0.85) 1.43%,
+      rgba(31, 32, 39, 0.41) 63.84%,
+      rgba(31, 32, 39, 0.41) 63.84%
+    );
   }
 }

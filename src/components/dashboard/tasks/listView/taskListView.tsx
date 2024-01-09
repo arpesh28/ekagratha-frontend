@@ -3,7 +3,7 @@ import TaskListItem from "./taskListItem";
 
 const ListView: React.FC<TaskListView> = ({ title, subTitle }) => {
   return (
-    <div className="bg-cardContainer rounded-2xl p-3 lg:p-5 mt-5  shadow-sm border-2 border-border ">
+    <div className="bg-cardContainerGradient rounded-lg p-3 lg:p-5 shadow-cardContainerShadow border-2 border-border">
       <h2 className="font-bold text-lg mb-5">
         {title}
         <span className="font-normal before:content-[''] before:bg-foreground before:inline-block before:align-middle before:w-1 before:h-1 text-gray-500 before:mx-2">

@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: (theme) => ({
+        cardContainerGradient: "var(--card-container-gradient)",
+        cardGradient: "var(--card-gradient)",
+        sideNavGradient: "var(--sideNav-gradient)",
+      }),
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -89,6 +94,7 @@ const config = {
         // lightMain: "#cbd3dd", //#cbd3dd,F6F6F6
         // lightPrimary: "#282836",
       },
+      // backgroundImage:'radial-gradient(circle at center,#0f1118, #121219,#0f1118,rgb(13 12 21)',
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -107,6 +113,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        cardContainerShadow: "var(--card-container-shadow)",
       },
     },
   },
