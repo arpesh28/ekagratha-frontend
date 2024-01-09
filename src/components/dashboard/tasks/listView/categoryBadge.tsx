@@ -3,7 +3,7 @@ import { TaskCategory } from "@/lib/typings/interfaces/task.interface";
 const CategoryBadge: React.FC<TaskCategory> = ({ name }) => {
   return (
     <span
-      className={`bg-muted mx-1 px-2 py-1 text-muted-foreground rounded-sm text-sm font-bold`}
+      className={`bg-[#2d2d4e] px-2 py-1 text-[#9195ff] rounded-[2px] text-sm font-medium`}
     >
       {name}
     </span>
