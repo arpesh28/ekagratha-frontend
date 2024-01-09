@@ -22,6 +22,7 @@ const config = {
         cardContainerGradient: "var(--card-container-gradient)",
         cardGradient: "var(--card-gradient)",
         sideNavGradient: "var(--sideNav-gradient)",
+        modalGradient: "var(--modal-gradient)",
       }),
       colors: {
         border: "hsl(var(--border))",

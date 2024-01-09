@@ -78,19 +78,27 @@
 
     --card-container-gradient: radial-gradient(
       14155.25% 129.31% at 51.09% 40.14%,
-      rgba(35, 35, 41, 0.06) 0%,
+      rgba(35, 35, 41, 0.06) 30%,
       rgba(26, 27, 33, 0.87) 100%
     );
     --card-gradient: linear-gradient(
       270deg,
-      rgba(33, 34, 41, 0.71) 7.5%,
-      rgba(34, 35, 41, 0.55) 85.65%
+      rgb(33 34 41) 70.5%,
+      rgb(34 35 41 / 83%) 85.65%
     );
     --sideNav-gradient: linear-gradient(
       270deg,
-      rgba(26, 27, 34, 0.85) 1.43%,
+      rgba(26, 27, 34, 0.85) 50.43%,
       rgba(31, 32, 39, 0.41) 63.84%,
       rgba(31, 32, 39, 0.41) 63.84%
     );
+    --modal-gradient: linear-gradient(
+      270deg,
+      rgb(28 29 37) 50.43%,
+      rgb(31 32 39 / 87%) 63.84%,
+      rgb(24 25 33) 85.84%
+    );
   }
 }
+
+/* linear-gradient(      270deg,      rgb(26 27 34) 50.43%,      rgb(31 32 39 / 87%) 63.84%,      rgb(31 32 39) 85.84%    ) */
