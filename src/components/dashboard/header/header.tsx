@@ -13,9 +13,9 @@ import ThemeToggler from "../../themeToggler";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="w-full bg-sideNavGradient pl-10 py-4 flex items-center justify-between border-b-2 border-border">
-      <div>
-        <h3 className="text-lg lg:text-2xl font-semibold">
+    <header className="w-full bg-sideNavGradient pl-10 py-2 flex items-center justify-between border-b-2 border-border">
+      <div className="flex space-x-2">
+        <h3 className="text-sm font-semibold">
           {navItems.find((item) => item.href == pathname)?.heading}
         </h3>
         <p className="text-sm text-gray-600">Hi, Arpesh!</p>
@@ -24,11 +24,11 @@ const Header = () => {
         <Button
           size="icon"
           variant="ghost"
-          className="hidden md:block shadow-none hover:bg-transparent  transition-all ease-in-out duration-500 group p-0"
+          className="hidden md:flex shadow-none hover:bg-transparent  transition-all ease-in-out duration-500 group p-0"
         >
           <svg
-            width="18"
-            height="19"
+            width="13"
+            height="14"
             viewBox="0 0 18 19"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
