@@ -16,15 +16,14 @@ const NavLinks = () => {
             href={link.href}
             key={link.name + index}
             className={clsx(
-              "my-1 text-sm text-sideNav-foreground tracking-wide w-full justify-start py-3 hover:bg-cardSelection  flex items-center px-5 rounded-sm transition-all duration-300",
+              "my-1 text-xs text-sideNav-foreground tracking-wide w-full justify-start py-2 hover:bg-cardSelection flex items-center px-3 rounded-sm transition-all duration-300 group",
               {
-                "bg-cardSelection !text-primary font-semibold":
-                  pathname === link.href,
+                "bg-cardSelection": pathname === link.href,
               }
             )}
           >
-            <LinkIcon />
-            <span className="ml-4">{link.name}</span>
+            <LinkIcon className="text-gray-400 group-hover:text-white" />
+            <span className="ml-3">{link.name}</span>
           </Link>
         );
       })}
