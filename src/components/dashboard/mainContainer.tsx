@@ -7,7 +7,7 @@ const MainContainer = ({
 }) => {
   return (
     <main
-      className={` overflow-y-scroll overflow-x-visible pt-4 px-4 pb-[100px] lg:pb-0 ${classes}`}
+      className={`overflow-y-auto overflow-x-visible pt-4 px-4 pb-[100px] lg:pb-0 ${classes}`}
     >
       {children}
     </main>

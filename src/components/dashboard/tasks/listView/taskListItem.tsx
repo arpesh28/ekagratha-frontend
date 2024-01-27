@@ -20,7 +20,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
     <>
       <li
         className={clsx(
-          `bg-cardGradient border-2 border-transparent transition-all duration-300 hover:border-border dark:hover:brightness-150 px-3 lg:px-5 py-3 relative rounded-lg mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className} cursor-pointer  transition-all duration-400`,
+          ` transition-all border-b-[0.5px] border-border duration-300 hover:bg-cardGradient hover:border-border dark:hover:brightness-150 px-3 lg:px-5 py-2 relative rounded-md rounder-sm mb-1 md:after:content-none after:content-['']  after:rounded-full after:w-3 after:h-3  after:absolute after:right-[-2px] after:top-[-2px] after:shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm ${heebo.className} cursor-pointer  transition-all duration-400`,
           {
             "after:bg-redText after:shadow-redText": priority === "high",
             "after:bg-yellowText after:shadow-yellowText":
@@ -30,7 +30,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
         )}
         onClick={toggleDetailsModal}
       >
-        <div className="flex items-start justify-start">
+        <div className="flex  justify-start items-center">
           <Checkbox
             className={`w-4 h-4 rounded-full`}
             id="terms"
@@ -40,7 +40,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
           <label
             htmlFor="terms"
             className={clsx(
-              "text-sm ml-4 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-ellipsis overflow-hidden line-clamp-2 mr-5 cursor-pointer",
+              "text-xs ml-4  leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-ellipsis overflow-hidden line-clamp-2 mr-5 cursor-pointer",
               {
                 "line-through opacity-50 text-greenText": status == 1,
               }
@@ -50,7 +50,7 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
           </label>
         </div>
         <div className="flex items-start mt-2 ml-8 md:m-0">
-          <span
+          {/* <span
             className={clsx(
               `font-medium hidden md:block text-md mr-4 uppercase `,
               {
@@ -61,16 +61,16 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
             )}
           >
             {priority}
-          </span>
+          </span> */}
           {/* <div className="mr-4 hidden lg:block">
           <CategoryBadge name="NPM Package" />
           <CategoryBadge name="Node.js" />
           <CategoryBadge name="MongoDB" />
         </div> */}
           <div
-            className={`text-sm font-medium text-gray-500 md:text-gray-400 text-right  md:flex lg:block flex-col items-end justify-start `}
+            className={`text-xs font-medium text-gray-500 md:text-gray-400 text-right  md:flex lg:block  items-end justify-start `}
           >
-            <span>10-01-24</span>
+            <span>Jan 26</span>
             <span className="font-light ml-2 text-gray-500">2:30pm</span>
           </div>
         </div>

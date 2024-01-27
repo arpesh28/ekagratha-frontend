@@ -3,13 +3,13 @@ import TaskListItem from "./taskListItem";
 
 const ListView: React.FC<TaskListView> = ({ title, subTitle }) => {
   return (
-    <div className="bg-cardContainerGradient rounded-lg p-3 lg:p-5 shadow-cardContainerShadow border-2 border-border">
-      <h2 className="font-bold text-lg mb-5">
+    <div className=" rounded-lg p-3 lg:p-5 ">
+      <h3 className="text-sm font-semibold mb-3">
         {title}
-        <span className="font-normal before:content-[''] before:bg-foreground before:inline-block before:align-middle before:w-1 before:h-1 text-gray-500 before:mx-2">
+        <span className="font-normal text-xs before:content-[''] before:bg-foreground before:inline-block before:align-middle before:w-1 before:h-1 text-gray-500 before:mx-2">
           {subTitle}
         </span>
-      </h2>
+      </h3>
       <ul>
         <TaskListItem
           key={0}

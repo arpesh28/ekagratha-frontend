@@ -12,7 +12,8 @@
     --card-container-foreground: 222.2 84% 4.9%;
     --card-selection: 220 82% 96%;
     --card-selection-foreground: 222.2 84% 4.9%;
-    --primary: 220 83% 47%;
+    /* --primary: 220 83% 47%; */
+    --primary: 238 50% 56%;
     --primary-foreground: 0 0% 100%;
     --muted: 217 45% 94%;
     --muted-foreground: 213 23% 64%;
@@ -26,7 +27,6 @@
     --special-background: 0 0% 100%;
     --sideNav: 0 0% 100%;
     --sideNav-foreground: 251 16% 21%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
     --secondary: 210 40% 96.1%;
@@ -35,9 +35,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --radius: 10px;
-
     --card-container-shadow: 2px 6px 20px 2px #bdc3ca61;
-
     --card-container-gradient: linear-gradient(45deg, #f7f7f7, #f9f9f9);
     --card-gradient: linear-gradient(45deg, white, white);
     --sideNav-gradient: linear-gradient(45deg, #fcfcfc, #fcfcfc);
@@ -49,12 +47,12 @@
     --card: 240 15% 14%;
     --card-foreground: 210 40% 98%;
     --card-container: 228 14% 7%;
-
     --card-container-foreground: 210 40% 98%;
     --card-selection: 231 16% 15%;
     --card-selection-foreground: 222.2 84% 4.9%;
     --border: 220 10% 17%;
-    --primary: 220 83% 47%;
+    /* --primary: 220 83% 47%; */
+    --primary: 238 50% 56%;
     --primary-foreground: 0 0% 100%;
     --accent: 169 51% 50%;
     --muted: 240 18% 23%;
@@ -62,9 +60,7 @@
     --input: 255, 29%, 16%;
     --special-background: 270 30% 91%;
     --sideNav: 232 13% 12%;
-
     --sideNav-foreground: 0 0% 100%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
     --secondary: 217.2 32.6% 17.5%;
@@ -73,9 +69,7 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --radius: 10px;
-
     --card-container-shadow: 0px 25px 44px -28px #00000082;
-
     --card-container-gradient: radial-gradient(
       14155.25% 129.31% at 51.09% 40.14%,
       rgba(35, 35, 41, 0.06) 30%,
@@ -99,6 +93,13 @@
       rgb(24 25 33) 85.84%
     );
   }
+}
+.PopoverContent {
+  position: sticky;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /* linear-gradient(      270deg,      rgb(26 27 34) 50.43%,      rgb(31 32 39 / 87%) 63.84%,      rgb(31 32 39) 85.84%    ) */
