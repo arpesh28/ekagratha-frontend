@@ -21,8 +21,29 @@ import {
 import { SideModalInterface } from "@/lib/typings/interfaces/component.interface";
 import CategoryBadge from "../tasks/listView/categoryBadge";
 import PriorityBadge from "../tasks/listView/priorityTag";
+import ImageModal from "./imageModal";
+
 
 export function SideModal({ open, toggleModal }: SideModalInterface) {
+  const data: {
+    url: string;
+  }[] = [
+      {
+        url: 'https://picsum.photos/900/900'
+      },
+      {
+        url: 'https://picsum.photos/900/900'
+      },
+      {
+        url: 'https://picsum.photos/900/900'
+      },
+      {
+        url: 'https://picsum.photos/900/900'
+      },
+      {
+        url: 'https://picsum.photos/900/900'
+      },
+    ];
   return (
     <Sheet open={open} onOpenChange={toggleModal}>
       <SheetContent className="">
@@ -39,20 +60,20 @@ export function SideModal({ open, toggleModal }: SideModalInterface) {
         </div>
         <Table className="mt-5">
           <TableBody className="text-sm">
-            <TableRow className="border-0">
+            <TableRow className="border-0 hover:bg-transparent">
               <TableCell className="align-top text-left pl-0 text-[##b9bac1] font-light">
                 Created:
               </TableCell>{" "}
               <TableCell className="align-top">January 31, 2024</TableCell>
             </TableRow>
 
-            <TableRow className="border-0">
+            <TableRow className="border-0 hover:bg-transparent">
               <TableCell className="align-top text-left pl-0 text-[##b9bac1] font-light">
                 Deadline:
               </TableCell>{" "}
               <TableCell className="align-top">January 31, 2024</TableCell>
             </TableRow>
-            <TableRow className="border-0">
+            <TableRow className="border-0 hover:bg-transparent">
               <TableCell className="align-top text-left pl-0 text-[##b9bac1] font-light">
                 Summary:
               </TableCell>{" "}
@@ -63,6 +84,18 @@ export function SideModal({ open, toggleModal }: SideModalInterface) {
                 atque earum dolorum tempore minima fugiat, similique nostrum
                 obcaecati accusamus dignissimos accusantium ipsam placeat et
                 molestias, impedit optio.
+              </TableCell>
+            </TableRow>
+            <TableRow className="border-0 hover:bg-transparent">
+              <TableCell className="align-top text-left pl-0 text-[##b9bac1] font-light">
+                Image:
+              </TableCell>{" "}
+              <TableCell className="align-top">
+                <div className=" flex justify-start items-center gap-3">
+                  {data.map((image, index) => (
+                    <ImageModal key={index} image={image.url} />
+                  ))}
+                </div>
               </TableCell>
             </TableRow>
           </TableBody>

@@ -19,7 +19,7 @@ const ThemeToggler = () => {
   return (
     <div
       className={clsx(
-        "hidden w-28 h-12 shadow-sm  md:flex justify-start items-center rounded-full  p-1 border-0 cursor-pointer bg-cardSelection relative",
+        "hidden w-28 h-8 shadow-sm  md:flex justify-start items-center rounded-full  p-1 border-0 cursor-pointer bg-cardSelection relative",
         {
           "justify-end  border-primary": theme === "dark",
         }
@@ -34,15 +34,15 @@ const ThemeToggler = () => {
           ease: "circOut",
         }}
       >
-        <div className="bg-primary-foreground rounded-full w-14 h-10  flex items-center justify-center shadow-sm"></div>
+        <div className="bg-primary-foreground rounded-full w-14 h-8  flex items-center justify-center shadow-sm"></div>
       </motion.div>
       <div className="z-10 w-full h-full rounded-full flex justify-around items-center">
         <PiSunDuotone
-          className={clsx("text-2xl", { "text-primary": theme == "light" })}
+          className={clsx("text-sm", { "text-primary": theme == "light" })}
         />
 
         <PiMoonStarsDuotone
-          className={clsx("text-2xl", { "text-primary": theme == "dark" })}
+          className={clsx("text-sm", { "text-primary": theme == "dark" })}
         />
       </div>
     </div>

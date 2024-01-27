@@ -12,8 +12,7 @@ import { Avatar } from "@/components/ui/avatar";
 import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 
 //  Icon
-import { IoIosArrowDown } from "react-icons/io";
-import { FiLogOut } from "react-icons/fi";
+import { LogOut, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 const Menu = () => {
@@ -30,21 +29,21 @@ const Menu = () => {
               AG
             </AvatarFallback>
           </Avatar>
-          <div className="hidden md:flex flex-col items-start ml-3 tracking-wide font-semibold text-xs">
+          {/* <div className="hidden md:flex flex-col items-start ml-3 tracking-wide font-semibold text-xs">
             <span className="">Arpesh Gadekar</span>
             <span className="text-gray-500 tracking-wide font-light text-xs">
               arpesh@gmail.com
             </span>
-          </div>
-          <IoIosArrowDown className="ml-2 text-sm" />
+          </div> */}
+          <ChevronDown className="ml-2 text-sm" size={"14px"} />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 rounded-md border-[1px] border-gray-700 bg-darkOption hover:bg-darkOption">
+      <DropdownMenuContent className="w-56 bg-black bg-background hover:bg-background border-border">
         <DropdownMenuLabel className="">My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator className="bg-gray-700" />
-        <DropdownMenuItem className="hover:cursor-pointer">
-          <FiLogOut className="mr-2 h-4 w-4" />
-          <Link href="/auth/login">Log out</Link>
+        <DropdownMenuSeparator className="" />
+        <DropdownMenuItem className="hover:cursor-pointer hover:bg-primary hover:text-white">
+          <LogOut className="mr-2 h-4 w-4" size={"14px"} />
+          <Link className="text-xs font-semibold" href="/auth/login">Log out</Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

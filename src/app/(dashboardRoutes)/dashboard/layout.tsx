@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="md:overflow-y-hidden flex h-screen ">
             <SideNav />
             <BottomNav />
-            <div className="w-full overflow-y-scroll sticky">
+            <div className="w-full overflow-y-auto sticky">
               <Header />
               {children}
             </div>

@@ -22,7 +22,7 @@ const NavLinks = () => {
               }
             )}
           >
-            <LinkIcon className="text-gray-400 group-hover:text-white" />
+            <LinkIcon className="text-gray-400 group-hover:text-sideNav-foreground" size={"14px"} />
             <span className="ml-3">{link.name}</span>
           </Link>
         );
