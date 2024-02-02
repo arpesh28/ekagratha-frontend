@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { PiMoonStarsDuotone, PiSunDuotone } from "react-icons/pi";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
-
+//test comment
 const ThemeToggler = () => {
   const { setTheme, theme } = useTheme();
   const toggleSwitch = () => {
