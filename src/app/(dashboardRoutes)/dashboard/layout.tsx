@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased  bg-background `}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <div className="md:overflow-y-hidden flex h-screen ">
             <SideNav />
             <BottomNav />
