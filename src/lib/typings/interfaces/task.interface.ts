@@ -8,7 +8,7 @@ export interface TaskCategory {
   name: string;
 }
 
-export interface TaskListView {
+export interface TaskListViewProps {
   title: string;
   subTitle: string;
 }

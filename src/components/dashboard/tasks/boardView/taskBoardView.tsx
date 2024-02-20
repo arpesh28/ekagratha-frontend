@@ -1,9 +1,9 @@
 import { TaskListViewProps } from "@/lib/typings/interfaces/task.interface";
-import TaskListItem from "./taskListItem";
+import TaskBoardItem from "./taskBoardItem";
 
-const ListView: React.FC<TaskListViewProps> = ({ title, subTitle }) => {
+const BoardView: React.FC<TaskListViewProps> = ({ title, subTitle }) => {
   return (
-    <div className=" rounded-lg p-3 lg:p-5 ">
+    <div className="w-full rounded-lg p-3 lg:p-5 bg-cardContainer">
       <h3 className="text-sm font-semibold mb-3">
         {title}
         <span className="font-normal text-xs before:content-[''] before:bg-foreground before:inline-block before:align-middle before:w-1 before:h-1 text-gray-500 before:mx-2">
@@ -11,19 +11,19 @@ const ListView: React.FC<TaskListViewProps> = ({ title, subTitle }) => {
         </span>
       </h3>
       <ul>
-        <TaskListItem
+        <TaskBoardItem
           key={0}
           name="Learn Swift for IOS Development"
           priority="high"
           status={0}
         />
-        <TaskListItem
+        <TaskBoardItem
           key={1}
           name="Develop Ekagratha App"
           priority="medium"
           status={0}
         />
-        <TaskListItem
+        <TaskBoardItem
           key={2}
           name="Design & Develop Personal Portfolio showcasing skills and projects."
           priority="low"
@@ -34,4 +34,4 @@ const ListView: React.FC<TaskListViewProps> = ({ title, subTitle }) => {
   );
 };
 
-export default ListView;
+export default BoardView;
