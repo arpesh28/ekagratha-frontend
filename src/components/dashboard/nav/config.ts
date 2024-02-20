@@ -1,5 +1,4 @@
-import { GanttChart, Users, BarChart2, } from "lucide-react";
-
+import { GanttChart, Users, BarChart2 } from "lucide-react";
 
 export const navItems = [
   {
@@ -8,16 +7,11 @@ export const navItems = [
     icon: GanttChart,
     heading: "Personal Todos",
   },
+
   {
-    name: "Projects",
-    href: "/dashboard/projects",
-    icon: BarChart2,
-    heading: "Project Management",
-  },
-  {
-    name: "Team",
-    href: "/dashboard/team",
+    name: "Teams",
+    href: "/dashboard/teams",
     icon: Users,
-    heading: "Team Management",
+    heading: "Teams Management",
   },
 ];

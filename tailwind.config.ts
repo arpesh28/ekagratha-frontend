@@ -83,19 +83,7 @@ const config = {
         greenText: {
           DEFAULT: "hsl(var(--green-text))",
         },
-
-        // textLight: "#fcfcfd",
-        // textDark: "#0f172a",
-        // // primary: "#8419e6",
-        // darkMain: "#0e0f12", //#0e0f12,0e0e18
-        // darkPrimary: "#131418", //#18181a,#131319,141425
-        // darkSecondary: "#17181d", //#212124, #1b1b24,1c1c31
-        // darkOption: "#17181d",
-        // darkBorder: "#292d39",
-        // lightMain: "#cbd3dd", //#cbd3dd,F6F6F6
-        // lightPrimary: "#282836",
       },
-      // backgroundImage:'radial-gradient(circle at center,#0f1118, #121219,#0f1118,rgb(13 12 21)',
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
