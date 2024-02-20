@@ -10,12 +10,6 @@ const ThemeToggler = () => {
     setTheme(theme == "dark" ? "light" : "dark");
   };
 
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
-  };
-
   return (
     <div
       className={clsx(
