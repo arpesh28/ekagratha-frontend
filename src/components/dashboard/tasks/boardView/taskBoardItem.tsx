@@ -52,7 +52,7 @@ const TaskBoardItem: React.FC<Task> = ({ name, priority, status }) => {
         </div>
         <div>
           <div className="w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center p-1">
-            <span className="text-[9px] text-center">AG</span>
+            <span className="text-[9px] text-center text-white">AG</span>
           </div>
         </div>
       </li>
