@@ -36,7 +36,6 @@ const TaskListItem: React.FC<Task> = ({ name, priority, status }) => {
             id="terms"
             checked={status == 1}
           />
-          {/* radial-gradient(    circle at center,    #0f1118, #121219,    #0f1118, rgb(13 12 21)   ) */}
           <label
             htmlFor="terms"
             className={clsx(
