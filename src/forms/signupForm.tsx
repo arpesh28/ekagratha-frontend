@@ -1,4 +1,5 @@
 import { usePathname, useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 
 //  Components
 import { Button } from "../components/ui/button";
@@ -7,6 +8,11 @@ import { Input } from "../components/ui/input";
 const SignUpForm = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const {
+    register,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
   return (
     <form
       className="flex flex-col"
