@@ -22,12 +22,14 @@ const SignUpForm = () => {
         <div className="pb-2">
           <Input
             type="email"
+            {...register("email")}
             placeholder="Enter Your Email"
             className="mt-1 bg-input shadow-sm border-0"
           />
         </div>
         <div>
           <Input
+            {...register("password")}
             type="password"
             placeholder="Enter Your Password"
             className="mt-1 bg-input shadow-sm border-0"
