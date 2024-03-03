@@ -1,16 +1,16 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { LoginDataType as FormData } from "@/lib/typings/types/onboarding.types";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 //  Components
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
-import { loginSchema } from "@/lib/zodSchema/login";
+import { loginSchema } from "@/lib/zod/login";
 import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
-
-type FormData = z.infer<typeof loginSchema>;
+import { loginAction } from "@/actions/auth";
+import { AppRoutes } from "@/lib/constants/appRoutes";
 
 const SignUpForm = () => {
   const router = useRouter();
@@ -24,11 +24,9 @@ const SignUpForm = () => {
   });
 
   const onSubmit = async (data: FormData) => {
-    await new Promise((res) =>
-      setTimeout(() => {
-        res("asdf");
-      }, 5000)
-    );
+    const response: any = await loginAction(data);
+
+    if (response?.status === 200) router.replace(AppRoutes.dashboard);
   };
 
   return (
