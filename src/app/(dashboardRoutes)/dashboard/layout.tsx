@@ -5,6 +5,7 @@ import "../../globals.css";
 import Header from "@/components/dashboard/header/header";
 import { ThemeProvider } from "@/app/themeProvider";
 import BottomNav from "@/components/dashboard/nav/bottomNav";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,6 +27,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <BottomNav />
             <div className="w-full overflow-y-auto sticky">
               <Header />
+
+              <Toaster
+                position="top-center"
+                reverseOrder={false}
+                toastOptions={{
+                  style: {
+                    background: "#000",
+                    color: "#fff",
+                    borderRadius: "10px",
+                  },
+                }}
+              />
               {children}
             </div>
           </div>

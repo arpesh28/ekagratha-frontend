@@ -1,6 +1,7 @@
 "use client";
 
-import SignUpForm from "@/forms/signupForm";
+import LoginForm from "@/forms/loginForm";
+import SignUpForm from "@/forms/registerForm";
 import { usePathname, useRouter } from "next/navigation";
 
 const RightContent = () => {
@@ -17,7 +18,7 @@ const RightContent = () => {
         <span className="capitalize">{currPage}</span> Now!
       </p>
 
-      {currPage === "login" ? <SignUpForm /> : <SignUpForm />}
+      {currPage === "login" ? <LoginForm /> : <SignUpForm />}
     </div>
   );
 };
