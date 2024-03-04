@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -20,4 +20,36 @@ api.interceptors.request.use(
   }
 );
 
-export default api;
+interface IErrorBase<T> {
+  error: Error | AxiosError<T>;
+  type: "axios-error" | "stock-error";
+}
+
+interface IAxiosError<T> extends IErrorBase<T> {
+  error: AxiosError<T>;
+  type: "axios-error";
+}
+interface IStockError<T> extends IErrorBase<T> {
+  error: Error;
+  type: "stock-error";
+}
+
+const axiosErrorHandler = <T>(
+  callback: (err: IAxiosError<T> | IStockError<T>) => void
+) => {
+  return (error: Error | AxiosError<T>) => {
+    if (axios.isAxiosError(error)) {
+      callback({
+        error: error,
+        type: "axios-error",
+      });
+    } else {
+      callback({
+        error: error,
+        type: "stock-error",
+      });
+    }
+  };
+};
+
+export { api, axiosErrorHandler };

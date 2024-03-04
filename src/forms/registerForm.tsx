@@ -1,18 +1,20 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import { LoginDataType as FormData } from "@/lib/typings/types/onboarding.types";
+import { RegisterDataType as FormData } from "@/lib/typings/types/onboarding.types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "react-hot-toast";
 
 //  Components
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
-import { loginSchema } from "@/lib/zod/login";
+import { registerSchema } from "@/lib/zod/auth";
 import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
-import { loginAction } from "@/actions/auth";
+import { registerAction } from "@/actions/auth";
 import { AppRoutes } from "@/lib/constants/appRoutes";
+import { errorMessages, successMessages } from "@/lib/constants/messages";
 
-const SignUpForm = () => {
+const RegisterForm = () => {
   const router = useRouter();
   const pathname = usePathname();
   const {
@@ -20,18 +22,36 @@ const SignUpForm = () => {
     register,
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(registerSchema),
   });
 
   const onSubmit = async (data: FormData) => {
-    const response: any = await loginAction(data);
-
-    if (response?.status === 200) router.replace(AppRoutes.dashboard);
+    const response: any = await registerAction(data);
+    if (response?.status === 200) {
+      router.replace(AppRoutes.dashboard);
+    }
   };
 
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-8">
+        <div className="pb-2">
+          <Input
+            type="name"
+            {...register("name")}
+            id="name"
+            placeholder="Enter Your Name"
+            className={cn(
+              "mt-1 bg-input shadow-sm border-0",
+              errors.name && "!ring-red-500"
+            )}
+          />
+          {errors?.name && (
+            <div className="mt-1 text-sm font-normal text-red-500">
+              {errors.name.message}
+            </div>
+          )}
+        </div>
         <div className="pb-2">
           <Input
             type="email"
@@ -44,7 +64,7 @@ const SignUpForm = () => {
             )}
           />
           {errors?.email && (
-            <div className="text-red-500 mt-1 font-normal text-sm">
+            <div className="mt-1 text-sm font-normal text-red-500">
               {errors.email.message}
             </div>
           )}
@@ -61,14 +81,14 @@ const SignUpForm = () => {
             )}
           />
           {errors?.password && (
-            <div className="text-red-500 mt-1 font-normal text-sm">
+            <div className="mt-1 text-sm font-normal text-red-500">
               {errors.password.message}
             </div>
           )}
         </div>
       </div>
       <Button
-        className="w-full bg-primary uppercase"
+        className="w-full uppercase bg-primary"
         type="submit"
         disabled={isSubmitting}
       >
@@ -82,4 +102,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default RegisterForm;
