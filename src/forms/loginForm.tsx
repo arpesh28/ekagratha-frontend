@@ -1,18 +1,16 @@
-import { usePathname, useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
 import { LoginDataType as FormData } from "@/lib/typings/types/onboarding.types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "react-hot-toast";
+import { usePathname, useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 
 //  Components
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { loginSchema } from "@/lib/zod/auth";
-import { cn } from "@/lib/utils";
-import { Loader2 } from "lucide-react";
 import { loginAction } from "@/actions/auth";
 import { AppRoutes } from "@/lib/constants/appRoutes";
-import { errorMessages, successMessages } from "@/lib/constants/messages";
+import { cn } from "@/lib/utils";
+import { loginSchema } from "@/lib/zod/auth";
+import { Loader2 } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
 
 const LoginForm = () => {
   const router = useRouter();
@@ -28,12 +26,7 @@ const LoginForm = () => {
   const onSubmit = async (data: FormData) => {
     const response: any = await loginAction(data);
     if (response?.status === 200) {
-      toast.success(successMessages.LOGIN_SUCCESS);
       router.replace(AppRoutes.dashboard);
-    } else {
-      toast.error(
-        response?.response?.data?.message ?? errorMessages.UNKNOWN_ERROR
-      );
     }
   };
 
@@ -52,7 +45,7 @@ const LoginForm = () => {
             )}
           />
           {errors?.email && (
-            <div className="text-red-500 mt-1 font-normal text-sm">
+            <div className="mt-1 text-sm font-normal text-red-500">
               {errors.email.message}
             </div>
           )}
@@ -69,14 +62,14 @@ const LoginForm = () => {
             )}
           />
           {errors?.password && (
-            <div className="text-red-500 mt-1 font-normal text-sm">
+            <div className="mt-1 text-sm font-normal text-red-500">
               {errors.password.message}
             </div>
           )}
         </div>
       </div>
       <Button
-        className="w-full bg-primary uppercase"
+        className="w-full uppercase bg-primary"
         type="submit"
         disabled={isSubmitting}
       >

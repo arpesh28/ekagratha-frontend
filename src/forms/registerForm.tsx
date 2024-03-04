@@ -28,12 +28,7 @@ const RegisterForm = () => {
   const onSubmit = async (data: FormData) => {
     const response: any = await registerAction(data);
     if (response?.status === 200) {
-      toast.success(successMessages.REGISTER_SUCCESS);
       router.replace(AppRoutes.dashboard);
-    } else {
-      toast.error(
-        response?.response?.data?.message ?? errorMessages.UNKNOWN_ERROR
-      );
     }
   };
 
