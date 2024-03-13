@@ -1,18 +1,16 @@
-import { usePathname, useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
 import { RegisterDataType as FormData } from "@/lib/typings/types/onboarding.types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "react-hot-toast";
+import { usePathname, useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 
 //  Components
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { registerSchema } from "@/lib/zod/auth";
-import { cn } from "@/lib/utils";
-import { Loader2 } from "lucide-react";
 import { registerAction } from "@/actions/auth";
 import { AppRoutes } from "@/lib/constants/appRoutes";
-import { errorMessages, successMessages } from "@/lib/constants/messages";
+import { cn } from "@/lib/utils";
+import { registerSchema } from "@/lib/zod/auth";
+import { Loader2 } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -28,7 +26,9 @@ const RegisterForm = () => {
   const onSubmit = async (data: FormData) => {
     const response: any = await registerAction(data);
     if (response?.status === 200) {
-      router.replace(AppRoutes.dashboard);
+      router.push(
+        AppRoutes.verifyEmail + `?email=${encodeURIComponent(data.email)}`
+      );
     }
   };
 

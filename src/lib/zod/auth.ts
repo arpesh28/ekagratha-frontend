@@ -14,6 +14,17 @@ export const loginSchema = z.object({
     .min(1, { message: fieldRequiredErrorMessage("Password") }),
 });
 
+export const verifySchema = z.object({
+  email: z
+    .string()
+    .min(1, { message: fieldRequiredErrorMessage("Email") })
+    .email({ message: errorMessages.INVALID_EMAIL }),
+  otp: z
+    .string()
+    .min(4, { message: fieldRequiredErrorMessage("OTP") })
+    .length(4, { message: fieldRequiredErrorMessage("OTP") }),
+});
+
 export const registerSchema = z.object({
   name: z
     .string()
