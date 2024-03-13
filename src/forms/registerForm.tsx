@@ -26,7 +26,9 @@ const RegisterForm = () => {
   const onSubmit = async (data: FormData) => {
     const response: any = await registerAction(data);
     if (response?.status === 200) {
-      router.replace(AppRoutes.dashboard);
+      router.push(
+        AppRoutes.verifyEmail + `?email=${encodeURIComponent(data.email)}`
+      );
     }
   };
 

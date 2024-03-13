@@ -3,12 +3,17 @@
 import LoginForm from "@/forms/loginForm";
 import SignUpForm from "@/forms/registerForm";
 import VerifyEmailForm from "@/forms/verifyEmailForm";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const VerifyEmail = () => {
   const router = useRouter();
-  const pathname = usePathname();
-  const currPage = pathname?.split("/")?.[2];
+  const searchParams = useSearchParams();
+  const encodedEmail = searchParams.get("email");
+  if (!encodedEmail) {
+    router.replace("/auth/register");
+    return <></>;
+  }
+  const email = decodeURIComponent(encodedEmail);
   return (
     <div className="w-full">
       <h1 className="mb-3 text-2xl font-semibold tracking-wider text-center capitalize md:text-3xl text-textPrimary">
@@ -16,11 +21,11 @@ const VerifyEmail = () => {
       </h1>
       <p className="text-center text-gray-400 text-md">
         We have sent an OTP to your email address:{" "}
-        <b className="text-primary">arpesh@gmail.com</b>. Please enter it below
-        to verify.
+        <b className="text-primary">{email}</b>. Please enter it below to
+        verify.
       </p>
 
-      <VerifyEmailForm />
+      <VerifyEmailForm email={email} />
     </div>
   );
 };

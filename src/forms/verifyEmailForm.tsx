@@ -1,28 +1,32 @@
 import { VerifyEmailDataType as FormData } from "@/lib/typings/types/onboarding.types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { usePathname, useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
 import { OTPInput, SlotProps } from "input-otp";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 
 //  Components
 //  Components
-import { verifyEmailOTPAction } from "@/actions/auth";
-import { AppRoutes } from "@/lib/constants/appRoutes";
 import { cn } from "@/lib/utils";
-import { loginSchema } from "@/lib/zod/auth";
+import { verifySchema } from "@/lib/zod/auth";
 import { Loader2 } from "lucide-react";
 import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
+import { verifyEmailOTPAction } from "@/actions/auth";
+import { AppRoutes } from "@/lib/constants/appRoutes";
 
-const VerifyEmailForm = () => {
+const VerifyEmailForm = ({ email }: { email: string }) => {
   const router = useRouter();
-  const pathname = usePathname();
   const {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
+    setValue,
+    getValues,
   } = useForm<FormData>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(verifySchema),
+    defaultValues: {
+      email,
+      otp: "",
+    },
   });
 
   const onSubmit = async (data: FormData) => {
@@ -31,7 +35,6 @@ const VerifyEmailForm = () => {
       router.replace(AppRoutes.dashboard);
     }
   };
-
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       <div className="my-10">
@@ -40,7 +43,7 @@ const VerifyEmailForm = () => {
           containerClassName="group flex items-center has-[:disabled]:opacity-30 w-full"
           render={({ slots }) => (
             <>
-              <div className="flex w-full">
+              <div key="1" className="flex w-full">
                 {slots.slice(0, 4).map((slot, idx) => (
                   <>
                     <Slot key={idx} {...slot} />
@@ -50,6 +53,9 @@ const VerifyEmailForm = () => {
               </div>
             </>
           )}
+          onChange={(e) => {
+            setValue("otp", e);
+          }}
         />
       </div>
 
