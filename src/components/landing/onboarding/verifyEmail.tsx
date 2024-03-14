@@ -1,9 +1,7 @@
 "use client";
 
-import LoginForm from "@/forms/loginForm";
-import SignUpForm from "@/forms/registerForm";
 import VerifyEmailForm from "@/forms/verifyEmailForm";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const VerifyEmail = () => {
   const router = useRouter();
